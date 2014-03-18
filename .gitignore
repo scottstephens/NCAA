@@ -1,0 +1,4 @@
+*.suo
+packages/*
+Bin
+Debug
