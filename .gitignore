@@ -1,4 +1,4 @@
 *.suo
 packages/*
-Bin
-Debug
+bin
+obj
