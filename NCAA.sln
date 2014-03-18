@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCAA", "NCAA\NCAA.csproj", "{5D65452B-4A5F-47A0-9AFA-4BFCF31A36EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D65452B-4A5F-47A0-9AFA-4BFCF31A36EE}.Debug|x86.ActiveCfg = Debug|x86
+		{5D65452B-4A5F-47A0-9AFA-4BFCF31A36EE}.Debug|x86.Build.0 = Debug|x86
+		{5D65452B-4A5F-47A0-9AFA-4BFCF31A36EE}.Release|x86.ActiveCfg = Release|x86
+		{5D65452B-4A5F-47A0-9AFA-4BFCF31A36EE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
