@@ -8,10 +8,24 @@ namespace NCAA
 
     public enum Round { First, Second, Third, Sweet16, Elite8, Final4, Championship, Champion }
 
+    public static class RoundExtensions
+    {
+        public static Round Previous(this Round input)
+        {
+            return (Round)(((int)input) - 1);
+        }
+
+        public static Round Next(this Round input)
+        {
+            return (Round)(((int)input) + 1);
+        }
+    }
+
     public interface IBracketNode
     {
         IEnumerable<Prediction> PossibleTeams { get; }
         int NumPossibleTeams { get; }
+        TeamBracketNode AsTeamNode { get; }
     }
     public class BasicBracketNode : IBracketNode
     {
@@ -20,6 +34,8 @@ namespace NCAA
 
         public IEnumerable<Prediction> PossibleTeams { get { return this.QualifyingNode1.PossibleTeams.Concat(this.QualifyingNode2.PossibleTeams); } }
         public int NumPossibleTeams { get { return this.QualifyingNode1.NumPossibleTeams + this.QualifyingNode2.NumPossibleTeams; } }
+
+        public TeamBracketNode AsTeamNode { get { return null; } }
 
         public BasicBracketNode(IBracketNode qn1, IBracketNode qn2)
         {
@@ -77,6 +93,8 @@ namespace NCAA
         {
             get { return this.Prediction.Team; }
         }
+
+        public TeamBracketNode AsTeamNode { get { return this; } }
     }
     
     public class Bracket
